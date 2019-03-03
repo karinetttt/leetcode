@@ -1,4 +1,6 @@
 class Solution:
+// time: 0(n*m) 
+// space: (n*m)
     def uniquePaths(self, m: int, n: int) -> int:
         res=[[0 for _ in range(n)] for _ in range(m)]
         for i in range(m):
@@ -10,4 +12,3 @@ class Solution:
                 res[i][j]=res[i-1][j]+res[i][j-1]
         return res[m-1][n-1]
         
-    
